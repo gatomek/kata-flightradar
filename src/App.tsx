@@ -11,7 +11,7 @@ import {aircraftCollection} from "./geojson/aircraft.ts";
 import 'leaflet-rotate'
 import type {CustomTileLayer} from "./components/CustomTileLayer.ts";
 import {airplaneIcon} from "./leaflet/icon/airplaneIcon.ts";
-import {pinIcon} from "./leaflet/icon/pinIcon.ts";
+import {markerPinIcon} from "./leaflet/icon/markerPinIcon.ts";
 import {airportPinIcon} from "./leaflet/icon/airportPinIcon.ts";
 import {MapControls} from "./components/MapControls.tsx";
 import {SetViewCommand} from "./components/SetViewCommand.tsx";
@@ -49,7 +49,7 @@ type ShowGeoJsonObjectProps = {
 }
 
 function routePointToLayer(feature: Feature, latLng: LatLng) {
-    const icon = feature.properties?.type === pinType.Airport ? airportPinIcon : pinIcon;
+    const icon = feature.properties?.type === pinType.Airport ? airportPinIcon : markerPinIcon;
     return L.marker(latLng, {icon: icon})
         .bindTooltip(feature.properties?.desc, {permanent: false, direction: 'top', opacity: 0.75})
 }

@@ -69,7 +69,7 @@ const warsawZyrardowLowiczLodzLineString: Feature<LineString> = {
         coordinates: warsawZyrardowLowiczLodzList
     },
     properties: {
-        desc: "Warsaw to Lodz Line String"
+        desc: "Warsaw to Zarardow to Lowicz to Lodz Line String"
     }
 }
 
