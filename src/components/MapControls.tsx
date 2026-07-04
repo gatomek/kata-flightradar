@@ -1,15 +1,15 @@
-import {lodz, skierniewice, warsaw} from "../geojson/cities.ts";
-import {complexRoute, emptyRoute, simpleRoute} from "../geojson/data.ts";
-import {basemapsTileLayer, openstreetTileLayer, stadiaMapsTileLayer} from "./tileLayers.ts";
-import * as React from "react";
-import type {FeatureCollection} from "geojson";
-import type {CustomTileLayer} from "./CustomTileLayer.ts";
+import {lodz, skierniewice, warsaw} from '../geojson/cities.ts';
+import {complexRoute, emptyRoute, simpleRoute} from '../geojson/data.ts';
+import {basemapsTileLayer, openstreetTileLayer, stadiaMapsTileLayer} from './tileLayers.ts';
+import * as React from 'react';
+import type {FeatureCollection} from 'geojson';
+import type {CustomTileLayer} from './CustomTileLayer.ts';
 
 export type MapControlsProps = {
     setMarker: React.Dispatch<React.SetStateAction<number[] | undefined>>;
     setGeoJsonRoute: React.Dispatch<React.SetStateAction<FeatureCollection | undefined>>;
     setTileLayer: React.Dispatch<React.SetStateAction<CustomTileLayer>>;
-}
+};
 
 export function MapControls(props: Readonly<MapControlsProps>) {
     return (

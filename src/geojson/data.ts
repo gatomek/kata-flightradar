@@ -1,112 +1,94 @@
 import type {Feature, FeatureCollection, LineString, Point} from 'geojson';
-import {lodz, lowicz, warsaw, zyrardow} from "./cities.ts";
-import {pinType} from "../leaflet/PinType.ts";
+import {lodz, lowicz, warsaw, zyrardow} from './cities.ts';
+import {pinType} from '../leaflet/PinType.ts';
 
-const warsawZyrardowLowiczLodzList: number[][] = [
-    warsaw,
-    zyrardow,
-    lowicz,
-    lodz
-]
+const warsawZyrardowLowiczLodzList: number[][] = [warsaw, zyrardow, lowicz, lodz];
 
-const warsawLodzList: number[][] = [
-    warsaw,
-    lodz
-]
+const warsawLodzList: number[][] = [warsaw, lodz];
 
 // geojson
 
 const lowiczPoint: Feature<Point> = {
-    type: "Feature",
+    type: 'Feature',
     geometry: {
-        type: "Point",
+        type: 'Point',
         coordinates: lowicz
     },
     properties: {
-        desc: "Łowicz"
+        desc: 'Łowicz'
     }
-}
+};
 
 const zyrardowPoint: Feature<Point> = {
-    type: "Feature",
+    type: 'Feature',
     geometry: {
-        type: "Point",
+        type: 'Point',
         coordinates: zyrardow
     },
     properties: {
-        desc: "Żyrardów"
+        desc: 'Żyrardów'
     }
-}
+};
 
 const warsawPoint: Feature<Point> = {
-    type: "Feature",
+    type: 'Feature',
     geometry: {
-        type: "Point",
+        type: 'Point',
         coordinates: warsaw
     },
     properties: {
-        desc: "Okęcie Airport",
+        desc: 'Okęcie Airport',
         type: pinType.Airport
     }
-}
+};
 
 const lodzPoint: Feature<Point> = {
-    type: "Feature",
+    type: 'Feature',
     geometry: {
-        type: "Point",
+        type: 'Point',
         coordinates: lodz
     },
     properties: {
-        desc: "Lublinek Airport",
+        desc: 'Lublinek Airport',
         type: pinType.Airport
     }
-}
+};
 
 const warsawZyrardowLowiczLodzLineString: Feature<LineString> = {
-    type: "Feature",
+    type: 'Feature',
     geometry: {
-        type: "LineString",
+        type: 'LineString',
         coordinates: warsawZyrardowLowiczLodzList
     },
     properties: {
-        desc: "Warsaw to Zarardow to Lowicz to Lodz Line String"
+        desc: 'Warsaw to Zarardow to Lowicz to Lodz Line String'
     }
-}
+};
 
 const warsawLodzLineString: Feature<LineString> = {
-    type: "Feature",
+    type: 'Feature',
     geometry: {
-        type: "LineString",
+        type: 'LineString',
         coordinates: warsawLodzList
     },
     properties: {
-        desc: "Warsaw to Lodz Line String"
+        desc: 'Warsaw to Lodz Line String'
     }
-}
+};
 
 // routes
 
 export const complexRoute: FeatureCollection = {
-    type: "FeatureCollection",
-    features: [
-        warsawPoint,
-        zyrardowPoint,
-        lowiczPoint,
-        lodzPoint,
-        warsawZyrardowLowiczLodzLineString
-    ]
-}
+    type: 'FeatureCollection',
+    features: [warsawPoint, zyrardowPoint, lowiczPoint, lodzPoint, warsawZyrardowLowiczLodzLineString]
+};
 
 export const simpleRoute: FeatureCollection = {
-    type: "FeatureCollection",
-    features: [
-        warsawPoint,
-        lodzPoint,
-        warsawLodzLineString
-    ]
-}
+    type: 'FeatureCollection',
+    features: [warsawPoint, lodzPoint, warsawLodzLineString]
+};
 
 export const emptyRoute: FeatureCollection = {
-    type: "FeatureCollection",
+    type: 'FeatureCollection',
     features: []
-}
+};
