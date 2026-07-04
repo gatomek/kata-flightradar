@@ -4,9 +4,13 @@
 
 Kata project.
 
-# GitHub repo
+## GitHub repo
 
 https://github.com/gatomek/kata-flightradar-flight
+
+## Application
+
+https://gatomek.github.io/kata-flightradar-flight
 
 ## Project preparation
 
