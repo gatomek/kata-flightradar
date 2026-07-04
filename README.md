@@ -1,13 +1,11 @@
-# npm project preparation 
+# Project preparation 
 ```
 npm install leaflet
 npm install react-leaflet
 npm install -D @types/leaflet
 npm install geojson
-
 npm install object-hash
 npm install -D @types/object-hash
-
 npm install leaflet-rotate
 npm install -D @types/leaflet-rotate
 ```
